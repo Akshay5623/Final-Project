@@ -35,6 +35,13 @@ def update_team(team_id):
 
     return render_template("team_form.html", title="Update Team Name and City", form=form)
 
+@app.route('/delete-team/<int:team_id>')
+def delete_team(team_id):
+    team = Teams.query.get(team_id)
+    db.session.delete(team)
+    db.session.commit()
+    return redirect(url_for('home'))
+
 @app.route('/create-players/<int:team_id>', methods=['GET','POST'])
 def create_players(team_id):
     form = PlayersForm()
@@ -64,3 +71,10 @@ def update_players(player_id):
         return redirect(url_for("home"))
 
     return render_template("players_form.html", title="Update your Players", form=form)
+
+@app.route('/delete-players/<int:player_id>')
+def delete_players(player_id):
+    player = Players.query.get(player_id)
+    db.session.delete(player)
+    db.session.commit()
+    return redirect(url_for("home"))    
