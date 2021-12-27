@@ -14,4 +14,3 @@ class Players(db.Model):
     powerforward = db.Column(db.String(255), nullable=False)
     center = db.Column(db.String(255), nullable=False)
     team_id = db.Column(db.Integer, db.ForeignKey('teams.team_id'), nullable=False)
-

@@ -14,4 +14,3 @@ class PlayersForm(FlaskForm):
     powerforward = StringField("Select your Power Forward", validators=[DataRequired()])
     center = StringField("Select your Center", validators=[DataRequired()])
     submit = SubmitField("Confirm your Players")
-#
