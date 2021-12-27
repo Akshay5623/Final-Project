@@ -11,3 +11,5 @@ app.config['SECRET_KEY'] = str(uuid.uuid4())
 db = SQLAlchemy(app)
 
 from application import routes
+
+#

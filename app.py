@@ -7,7 +7,7 @@ if __name__ == "__main__":
     # the schema.
     #
     # To set the CREATE_SCHEMA value on Linux, run:
-    #   export CREATE_SCHEMA=true
+    #   export CREATE_SCHEMA=true #
     
     if getenv("CREATE_SCHEMA") != None:
         if getenv("CREATE_SCHEMA").lower() == "true":
