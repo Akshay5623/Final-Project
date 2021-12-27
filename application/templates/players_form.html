@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+ <form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.pointguard.label }} {{ form.pointguard }}<br>
+    {{ form.shootingguard.label }} {{ form.shootingguard }}<br>
+    {{ form.smallforward.label }} {{ form.smallforward }}<br>
+    {{ form.powerforward.label }} {{ form.powerforward }}<br>
+    {{ form.center.label }} {{ form.center }}<br>
+    {{ form.submit }}<br>
+</form>
+
+{% endblock body %}
