@@ -18,3 +18,4 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD:
       MYSQL_DATABASE: fantasybasketball
+    restart: always  
