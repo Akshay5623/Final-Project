@@ -8,7 +8,7 @@ services:
     - published: 80
       target: 5000
     environment:
-      DATABASE_URI: mysql+pymysql://root:${MYSQL_ROOT_PASSWORD}@fantasybasketball_database:3306/fantasybasketball
+      DATABASE_URI: 
       CREATE_SCHEMA:
     depends_on:
     - database  
