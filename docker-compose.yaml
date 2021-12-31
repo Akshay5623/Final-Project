@@ -1,20 +1,20 @@
 version: "3.8"
 services:
-  fantasybasketball-app:
-    container_name: fantasybasketball_app
-    image: ${DOCKER_HUB_CREDS_USR}/fantasybasketball_app:latest
+  basketball-app:
+    container_name: basketball_app
+    image: akshay2323/basketball_app:latest
     build: .
     ports:
     - published: 80
       target: 5000
     environment:
-      DATABASE_URI: 
+      DATABASE_URI: mysql+pymysql://root:${MYSQL_ROOT_PASSWORD}@basketball_database:3306/basketball
       CREATE_SCHEMA:
     depends_on:
     - database  
   database:
-    container_name: fantasybasketball_database
+    container_name: basketball_database
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD:
-      MYSQL_DATABASE: fantasybasketball
+      MYSQL_DATABASE: basketball
