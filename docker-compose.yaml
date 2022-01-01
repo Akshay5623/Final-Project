@@ -18,8 +18,10 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD:
       MYSQL_DATABASE: fantasybasketball
-    restart: always  
-    ports:
-    - "3306:3306"
-
+    volumes:
+    - type: volume
+      source: fantasybasketball_database_volume
+      target: /var/lib/mysql
+volumes:
+  fantasybasketball_database_volume:      
 
