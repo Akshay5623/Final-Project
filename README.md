@@ -3,10 +3,10 @@
 
 * [Project Overview](#project-overview)
 * [Application](#application)
-* [Project Management](#project-management)
-* [Risk Assessment](#risk-assessment)
 * [Pipeline](#pipeline)
 * [Unit Testing](#unit-testing)
+* [Project Management](#project-management)
+* [Risk Assessment](#risk-assessment)
 * [Future Improvements](#future-improvements)
 * [Author](#author)
 
@@ -39,22 +39,6 @@ The database used was an official MySQL image pulled from Docker Hub and created
 The objective of the application was to have it running in a Docker swarm with the application service and the database services in containers as shown in the image below. As of now, the application runs smoothly in two separate containers which interact with each other via SQLAlchemy when runnning as a Docker Compose command, but there are issues running the application via a swarm.
 
 ![CLD](./docs/Component-Level-Diagram.png)
-
-## Project Management
-
-To keep a track of the project I used GitHub project boards, this allowed me to keep track of my user stories as comments within the opened issues as seen below
-
-Using GitHub project boards also allowed me to use and keep track of my feature branches easily by tagging related issues to feature branches, leaving less chance for merge conflicts
-
-I used MoSCoW prioritisation for the project, feature branches were used for the must have priorities placed on the project, however due to the time constraints placed on the project no tasks were assigned to Should have or Could have. 
-
-![GitHub Project Board](./docs/Project-Board.png)
-
-## Risk Assessment
-
-The risk assessment table below lists the risks to the project, the description of the risk, mitigation, likelihood and impact.
-
-![Risk Assessment](./docs/Risk-Assessment.png)
 
 ## Pipeline
 
@@ -93,6 +77,22 @@ I was able to complete all 13 tests written with a 100% pass rate as well as a 9
 ![Test Results](./docs/Test-Results.png)
 
 ![Coverage Report](./docs/Coverage-Report.png)
+
+## Project Management
+
+To keep a track of the project I used GitHub project boards, this allowed me to keep track of my user stories as comments within the opened issues as seen below
+
+Using GitHub project boards also allowed me to use and keep track of my feature branches easily by tagging related issues to feature branches, leaving less chance for merge conflicts
+
+I used MoSCoW prioritisation for the project, feature branches were used for the must have priorities placed on the project, however due to the time constraints placed on the project no tasks were assigned to Should have or Could have. 
+
+![GitHub Project Board](./docs/Project-Board.png)
+
+## Risk Assessment
+
+The risk assessment table below lists the risks to the project, the description of the risk, mitigation, likelihood and impact.
+
+![Risk Assessment](./docs/Risk-Assessment.png)
 
 ## Future Improvements
 
