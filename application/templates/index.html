@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<p>
+    Here are the Teams created and Players assigned!!
+</p>
+{% for teams in all_teams %}
+    <p>
+        Team no. #{{ teams.team_id }}<br>
+        {{ teams.city }} {{ teams.teamname }}<br>
+        <a href="{{url_for('create_players', team_id=teams.team_id)}}">Add Players</a>
+        <a href="{{url_for('update_team', team_id=teams.team_id)}}">Update City and Name</a>
+        <a href="{{url_for('delete_team', team_id=teams.team_id)}}">Delete Team</a>
+        {% for player in teams.players %}
+            <p>
+                Players {{player.player_id}}<br>
+                Point Guard: {{ player.pointguard }}<br>
+                Shooting Guard: {{ player.shootingguard }}<br>
+                Small Forward: {{ player.smallforward }}<br>
+                Power Forward: {{ player.powerforward }}<br>
+                Center: {{ player.center }}<br>
+                <a href="{{url_for('update_players', player_id=player.team_id)}}">Update Players</a>
+                <a href="{{url_for('delete_players', player_id=player.team_id)}}">Delete Players</a>
+            </p>
+        {% endfor %}        
+    </p>    
+{% endfor %}
+
+{% endblock body %}
