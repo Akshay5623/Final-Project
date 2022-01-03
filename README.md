@@ -48,13 +48,13 @@ Using GitHub project boards also allowed me to use and keep track of my feature 
 
 I used MoSCoW prioritisation for the project, feature branches were used for the must have priorities placed on the project, however due to the time constraints placed on the project no tasks were assigned to Should have or Could have. 
 
-![GitHub Project Board](.docs/Project-Board.png)
+![GitHub Project Board](./docs/Project-Board.png)
 
 ## Risk Assessment
 
 The risk assessment table below lists the risks to the project, the description of the risk, mitigation, likelihood and impact.
 
-![Risk Assessment](Risk-Assessment.png)
+![Risk Assessment](./docs/Risk-Assessment.png)
 
 ## Pipeline
 
@@ -64,7 +64,7 @@ When I produce code on my local machine and push that code to GitHub, the code w
 
 My pipeline consists of 5 stages: Setup, Build, Test, Push and Deploy. Below is a diagram to show how CI/CD pipeline works 
 
-![CI CD Pipeline](.docs/CI-CD-Pipeline.png)
+![CI CD Pipeline](./docs/CI-CD-Pipeline.png)
 
 The setup stage installs all dependencies needed for the application
 
@@ -78,7 +78,7 @@ The deploy stage is intended to deploy the application via a Docker swarm.
 
 By having these stages set in place, the job will not pass if a previous stage of the pipeline fails, meaning it is easier to see where any code maybe failing. If the application is stable it will be pushed to another VM for deployment at the deployment stage. 
 
-![Pipeline](.docs/Pipeline.png)
+![Pipeline](./docs/Pipeline.png)
 
 ## Unit Testing
 
@@ -88,9 +88,9 @@ By running the tests within the Jenkins pipeline, I was able to use Junit report
 
 I was able to complete all 13 tests written with a 100% pass rate as well as a 99% code coverage rate as shown in the screenshots below.
 
-![Test Results](.docs/Test-Results.png)
+![Test Results](./docs/Test-Results.png)
 
-![Coverage Report](.docs/Coverage-Report.png)
+![Coverage Report](./docs/Coverage-Report.png)
 
 ## Future Improvements
 
