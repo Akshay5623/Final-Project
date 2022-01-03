@@ -84,7 +84,7 @@ To keep a track of the project I used GitHub project boards, this allowed me to 
 
 Using GitHub project boards also allowed me to use and keep track of my feature branches easily by tagging related issues to feature branches, leaving less chance for merge conflicts
 
-I used MoSCoW prioritisation for the project, feature branches were used for the must have priorities placed on the project, however due to the time constraints placed on the project no tasks were assigned to Should have or Could have. 
+I used MoSCoW prioritisation for the project, feature branches were used for the Must have priorities placed on the project, however due to the time constraints placed on the project most tasks were considered Must have and there was much less emphasis on tasks that would have been in the Should have or Could have categories. 
 
 ![GitHub Project Board](./docs/Project-Board.png)
 
@@ -98,16 +98,14 @@ The risk assessment table below lists the risks to the project, the description 
 
 Some of the future improvements I would like to make to the application include: 
 
-* To fix the issues regarding running the application via a Docker swarm.
+* To fix the issues regarding running the application via a Docker swarm which would allow for easier rolling updates.
 
-* To improve the aesthetics of the application.
+* To improve the aesthetics of the application as it is currently a very basic looking application.
 
-* To add a fantasy basketball section to the application which would change the relationship between the two entities to a many-to-many relationship to reflect a fantasy sports app.
+* To add a fantasy basketball section to the application which would change the relationship between the two entities to a many-to-many relationship to reflect a fantasy sports app rather than just a draft
 
-* To add more features to the application.
+* To add more features to the application e.g. the ability for users to create accounts.
 
 ## Author
 
 Akshay Patel
-
-
