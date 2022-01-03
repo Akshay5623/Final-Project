@@ -28,15 +28,15 @@ The aim of this project was to achieve the following requirements:
 
 The application I have created is a monolithic flask application which is a fantasy basketball draft. I chose a draft application for simplicity due to the tight deadline for this project. This app allows a user to create a team name based on a city and a following name. Once that has been created there is an ability to read that name on the homepage and underneath that you can update the name, create the players for that team and delete the team
 
-Once the user clicks on the create players link, the user can enter the player they wish to have in each position and submit that team. Once submitted the user is redirected to the home screen where their team name and players are both readable. The user then has the option to update the players or delete the players from their team.
+Once the user clicks on the create players link, the user can enter the player they wish to have in each position and submit that to their team. Once submitted the user is redirected to the home screen where their team name and players are both readable. The user then has the option to update the players or delete the players from their team as well as the options mentioned above.
 
 This means that the application is fully CRUD functional on both entities. The two entities have a one-to-many relationship with each other as shown in the Entity Relationship Diagram shown below
 
 ![ERD](./docs/ERD.png) 
 
-The database used was an official MySQL image pulled form Docker Hub and created via a docker-compose yaml file.
+The database used was an official MySQL image pulled from Docker Hub and created via a docker-compose yaml file.
 
-The objective of the application was to have it running in a Docker swarm with the application service and the database services in containers as shown in the image below. As of now, the application runs smoothly in two separate containers which interact with each other via docker compose, but there are issues running the application via a swarm.
+The objective of the application was to have it running in a Docker swarm with the application service and the database services in containers as shown in the image below. As of now, the application runs smoothly in two separate containers which interact with each other via SQLAlchemy when runnning as a Docker Compose command, but there are issues running the application via a swarm.
 
 ![CLD](./docs/Component-Level-Diagram.png)
 
@@ -62,15 +62,15 @@ I have created a CI/CD Pipeline for this application via Jenkins which allows fo
 
 When I produce code on my local machine and push that code to GitHub, the code will be automatically pulled to Jenkins via a webhook and Jenkins will automatically run the pipeline as set out in the Jenkinsfile.
 
-My pipeline consists of 5 stages: Setup, Build, Test, Push and Deploy. Below is a diagram to show how CI/CD pipeline works 
+My pipeline consists of 5 stages: Setup, Build, Test, Push and Deploy. Below is a diagram to show how a CI/CD pipeline works 
 
 ![CI CD Pipeline](./docs/CI-CD-Pipeline.png)
 
-The setup stage installs all dependencies needed for the application
+The setup stage installs all dependencies needed for all remaining stages of the pipeline 
 
-The deployment and testing, the build stage builds the application via the docker-compose yaml file
+The build stage builds the application via the docker-compose yaml file
 
-The testing stage uses pytest to test the application and then puts the test results and code coverage into a folder.
+The testing stage uses pytest to unit test the application and then puts the test results and code coverage into a folder on Jenkins.
 
 The push stage pushes the image to Docker Hub
 
@@ -78,13 +78,15 @@ The deploy stage is intended to deploy the application via a Docker swarm.
 
 By having these stages set in place, the job will not pass if a previous stage of the pipeline fails, meaning it is easier to see where any code maybe failing. If the application is stable it will be pushed to another VM for deployment at the deployment stage. 
 
+As seen in the image below, the latest pipeline runs show that the pipeline for this project is running smoothly after commits of code to the project repo and the application is deployed.
+
 ![Pipeline](./docs/Pipeline.png)
 
 ## Unit Testing
 
 I have used pytest to run the unit tests on the application, these tests are designed in a way to see if the areas being tested will produce a known value. 
 
-By running the tests within the Jenkins pipeline, I was able to use Junit reports and Cobetura reports to produce test reports and coverage reports respectively
+By running the tests as a script within the Jenkins pipeline, I was able to use Junit reports and Cobertura reports to produce test reports and coverage reports respectively
 
 I was able to complete all 13 tests written with a 100% pass rate as well as a 99% code coverage rate as shown in the screenshots below.
 
