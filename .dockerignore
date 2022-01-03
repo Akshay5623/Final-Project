@@ -2,7 +2,6 @@ environment
 venv/
 .pytest_cache
 __pycache__/
-*.db
 .gitignore
 .coverage
 jenkins/
