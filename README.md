@@ -46,7 +46,7 @@ I have created a CI/CD Pipeline for this application via Jenkins which allows fo
 
 When I produce code on my local machine and push that code to GitHub, the code will be automatically pulled to Jenkins via a webhook and Jenkins will automatically run the pipeline as set out in the Jenkinsfile.
 
-My pipeline consists of 5 stages: Setup, Build, Test, Push and Deploy. Below is a diagram to show how a CI/CD pipeline works 
+My pipeline consists of 5 stages: Setup, Build, Test, Push and Deploy. Below is a diagram to show an expample of how a CI/CD pipeline works 
 
 ![CI CD Pipeline](./docs/CI-CD-Pipeline.png)
 
